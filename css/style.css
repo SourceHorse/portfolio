@@ -3,28 +3,14 @@
 }
 
 .top-navbar {
-  top: 0;
   height: 60px;
   width: 100%;
+  margin-top: -8px;
   margin-left: -8px;
   background-color: black;
 }
-.top-navbar p {
-  margin: 0px 30px;
-  display: block;
-  float: left;
-  color: white;
-  font-family: 'Open Sans';
-  font-size: 35px;
-  color: white;
-}
 .top-navbar a {
-  display: block;
-  float: left;
   text-decoration: none;
-  color: white;
-  margin: 7px 5px 0px 5px;
-  padding: 5px 20px;
   font-family: 'Open Sans Condensed';
   font-size: 20px;
   color: white;
@@ -32,50 +18,50 @@
 .top-navbar a:hover {
   text-shadow: 0px 0px 10px orange;
 }
-.top-navbar i {
+.top-navbar .nav-buttons {
+  display: block;
+  float: left;
+  margin: 7px 5px 0px 5px;
+  padding: 5px 20px;
+}
+.top-navbar .social {
   display: block;
   float: right;
-}
-.top-navbar i:hover {
-  text-shadow: 0px 0px 10px orange;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px;
 }
 .top-navbar .drop-button {
   display: none;
-  margin: 5px 10px 5px 0px;
+  float: left;
+  margin: 10px 10px 5px 10px;
   padding: 0px 6px;
   font-size: 40px;
   color: white;
 }
-
-.orange {
-  color: orange !important;
+.top-navbar .drop-button:hover {
+  text-shadow: 0px 0px 10px orange;
 }
 
 @media screen and (max-width: 1095px) {
-  .top-navbar p {
-    font-size: 30px;
-  }
-  .top-navbar a {
+  .top-navbar .nav-buttons {
     display: none;
   }
   .top-navbar .drop-button {
     display: block;
   }
   .top-navbar.drop-menu {
-    height: auto;
+    height: 200px;
   }
-  .top-navbar.drop-menu p {
-    float: none;
-  }
-  .top-navbar.drop-menu a {
+  .top-navbar.drop-menu .nav-buttons {
     display: block;
     float: none;
-    text-align: left;
+    position: relative;
+    top: 48px;
   }
   .top-navbar.drop-menu .drop-button {
     display: block;
     position: absolute;
-    right: 0px;
+    left: 0px;
     top: 0px;
   }
 }

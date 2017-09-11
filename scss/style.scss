@@ -21,69 +21,60 @@
   position: fixed;
 }
 .top-navbar {
-  top: 0;
   height: 60px;
   width: 100%;
-  margin-left: -8px;
-  background-color: black;
-  p {
-    margin: 0px 30px;
-    display: block;
-    float: left;
-    color: white;
-    @include open-sans(35px);
+  margin: {
+    top: -8px;
+    left: -8px;
   }
+  background-color: black;
   a {
-    display: block;
-    float: left;
     text-decoration: none;
-    color: white;
-    margin: 7px 5px 0px 5px;
-    padding: 5px 20px;
     @include hover-effect;
     @include open-sans-cond(20px);
   }
-  i {
-    display: block;
-    float: right;
-    @include hover-effect;
+  .nav-buttons {
+      display: block;
+      float: left;
+      margin: 7px 5px 0px 5px;
+      padding: 5px 20px;
+  }
+  .social {
+      display: block;
+      float: right;
+      margin: 5px 5px 5px 5px;
+      padding: 5px 5px;
   }
   .drop-button {
     display: none;
-    margin: 5px 10px 5px 0px;
+    float: left;
+    margin: 10px 10px 5px 10px;
     padding: 0px 6px;
     font-size: 40px;
     color: white;
+    @include hover-effect;
   }
-}
-.orange {
-  color: orange !important;
 }
 @media screen and (max-width: 1095px) {
   .top-navbar{
-    p {
-      font-size: 30px;
-    }
-    a {
+    .nav-buttons {
       display: none;
     }
     .drop-button {
       display: block;
     }
     &.drop-menu {
-      height: auto;
-      p {
-        float: none;
-      }
-      a {
+      height: 200px;
+      .nav-buttons {
         display: block;
         float: none;
-        text-align: left;
+        position: relative;
+        top: 48px;
       }
       .drop-button {
         display: block;
         position: absolute;
-        right: 0px;
+        left: 0px;
         top: 0px;
       }
     }
