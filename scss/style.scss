@@ -1,0 +1,91 @@
+@mixin hover-effect($size:10px, $color:orange) {
+  &:hover {
+    text-shadow: 0px 0px $size $color;
+  }
+}
+@mixin open-sans($size, $color:white) {
+  font: {
+    family: 'Open Sans';
+    size: $size;
+  }
+  color: $color;
+}
+@mixin open-sans-cond($size, $color:white) {
+  font: {
+    family: 'Open Sans Condensed';
+    size: $size;
+  }
+  color: $color;
+}
+.fixed {
+  position: fixed;
+}
+.top-navbar {
+  top: 0;
+  height: 60px;
+  width: 100%;
+  margin-left: -8px;
+  background-color: black;
+  p {
+    margin: 0px 30px;
+    display: block;
+    float: left;
+    color: white;
+    @include open-sans(35px);
+  }
+  a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: white;
+    margin: 7px 5px 0px 5px;
+    padding: 5px 20px;
+    @include hover-effect;
+    @include open-sans-cond(20px);
+  }
+  i {
+    display: block;
+    float: right;
+    @include hover-effect;
+  }
+  .drop-button {
+    display: none;
+    margin: 5px 10px 5px 0px;
+    padding: 0px 6px;
+    font-size: 40px;
+    color: white;
+  }
+}
+.orange {
+  color: orange !important;
+}
+@media screen and (max-width: 1095px) {
+  .top-navbar{
+    p {
+      font-size: 30px;
+    }
+    a {
+      display: none;
+    }
+    .drop-button {
+      display: block;
+    }
+    &.drop-menu {
+      height: auto;
+      p {
+        float: none;
+      }
+      a {
+        display: block;
+        float: none;
+        text-align: left;
+      }
+      .drop-button {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    }
+  }
+}
