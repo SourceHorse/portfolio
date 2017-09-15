@@ -15,7 +15,7 @@ function scrollTo(tgt) {
 };
 
 $(window).scroll(function() {
-	if (($(window).scrollTop() < $('#portfolio').position().top) || ($(window).scrollTop() >= $('#contact').position().top)) {
+	if (($(window).scrollTop() < $('#portfolio').position().top - 10) || ($(window).scrollTop() >= $('#contact').position().top -10)) {
     $('#navbar').children().css('color', 'white');
   } else {
     $('#navbar').children().css('color', 'black');

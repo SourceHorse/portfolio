@@ -153,6 +153,10 @@ body {
   }
   p {
     @include roboto(20px, black);
+    margin: {
+      top: 0px;
+      bottom: 5px;
+    }
   }
   .go-down {
     cursor: pointer;

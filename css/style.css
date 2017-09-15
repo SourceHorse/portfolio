@@ -144,6 +144,8 @@ body {
   font-family: 'roboto';
   font-size: 20px;
   color: black;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 #portfolio .go-down {
   cursor: pointer;
