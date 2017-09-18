@@ -1,5 +1,6 @@
 @mixin hover-effect($size:10px, $color:white) {
   &:hover {
+    transition: 0.4s;
     text-shadow: 0px 0px $size $color;
   }
 }
@@ -138,7 +139,7 @@ body {
 
 #portfolio {
   height: 100vh;
-  min-height: 1500px;
+  min-height: 1600px;
   width: 100%;
   background-color: white;
   .section-box {
@@ -189,6 +190,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
+  grid-row-gap: 50px;
   &> div {
     height: 200px;
     overflow: hidden;
@@ -261,16 +263,16 @@ body {
   }
     .go-up {
       cursor: pointer;
-  position: relative;
-  top: 0;
-  text-align: center;
-  color: white;
-  p {
-    font-family: syncopate;
-    margin: 0;
+    position: relative;
+    top: 0;
+    text-align: center;
+    color: white;
+    p {
+      font-family: syncopate;
+      margin: 0;
+    }
+    @include hover-effect(10px, white);
   }
-  @include hover-effect(10px, white);
-}
 }
 
 #contact-form {
@@ -296,6 +298,7 @@ body {
 }
 
 .link-btn {
+  margin-right: 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 22px;
@@ -314,6 +317,26 @@ body {
   &:hover {
  
   }
+}
+.contact-buttons {
+  position: relative;
+  bottom: 0;
+  display: block;
+  float: left;
+  text-decoration: none;
+  &:not(:last-child) {
+    margin-right: 56px;
+  }
+  color: white;
+  @include roboto(36px, white);
+  @include hover-effect;
+  i {
+    font-size: 40px;
+    margin-right: 8px;
+  }
+}
+.fcc-icon {
+  font-size: 30px !important;
 }
 @media screen and (max-width: 1095px) {
   .top-navbar{
@@ -416,6 +439,7 @@ body {
   .port-img-1-details {
     grid-column: 1;
     grid-row: 2;
+    padding-bottom: 12px;
   }
   
   .port-img-2 {
@@ -426,6 +450,7 @@ body {
   .port-img-2-details {
     grid-column: 1;
     grid-row: 4;
+    padding-bottom: 12px;
   }
 
   .port-img-3 {
@@ -436,6 +461,7 @@ body {
   .port-img-3-details {
     grid-column: 1;
     grid-row: 6;
+    padding-bottom: 12px;
   }
 
   .port-img-4 {
@@ -446,6 +472,7 @@ body {
   .port-img-4-details {
     grid-column: 1;
     grid-row: 8;
+    padding-bottom: 12px;
   }
   
   .port-img-5 {
@@ -456,6 +483,28 @@ body {
   .port-img-5-details {
     grid-column: 1;
     grid-row: 10;
+    padding-bottom: 12px;
+  }
+}
+  .link-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  //font-size: 16px !important;
+  padding: 10px;
+  background-color: none;
+  border: {
+    style: solid;
+    color: black;
+    width: 1px;
+    radius: 30px;
+  }
+  @include roboto(16px, black);
+  i {
+    font-size: 16px;
+  }
+  &:hover {
+ 
   }
 }
 }
