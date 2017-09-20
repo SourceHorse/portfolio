@@ -1,10 +1,9 @@
-@mixin hover-effect($size:10px, $color:white) {
+@mixin hover-effect($color:white) {
   &:hover {
-    transition: 0.4s;
-    text-shadow: 0px 0px $size $color;
+    background-color: $color;
   }
 }
-@mixin roboto($size, $color:white) {
+@mixin roboto($size, $color:inherit) {
   font: {
     family: 'roboto';
     size: $size;
@@ -16,7 +15,14 @@
     shadow: 5px 5px 10px black;
   }
 }
+@mixin border {
 
+  border: {
+    style: solid;
+    width: 1px;
+    radius: 30px;
+  }
+}
 body {
   margin: 0;
   background-color: white;
@@ -31,32 +37,26 @@ body {
 .top-navbar {
   height: 60px;
   width: 100%;
-  p {
-    display: block;
-    float: left;
-    font: {
-      family: 'Alegreya Sans SC';
-      size: 40px;
-    }
-    color: white;
-    margin: 0;
-  }
   a {
     text-decoration: none;
-    @include hover-effect;
-    @include roboto(20px);
+    font-family: roboto
   }
   .nav-buttons {
-      display: block;
-      float: left;
-      margin: 7px 5px 0px 5px;
-      padding: 5px 20px;
+    display: block;
+    float: left;
+    margin: 7px 5px 0px 5px;
+    padding: 2px 16px;
+    border: {
+      style: solid;
+      width: 1px;
+      radius: 30px;
+    }
   }
   .social {
-      display: block;
-      float: right;
-      margin: 5px 5px 5px 5px;
-      padding: 5px 5px;
+    display: block;
+    float: right;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px;
   }
   .drop-button {
     display: none;
@@ -79,7 +79,9 @@ body {
     size: 100%;
     color: black;
   }
-  
+  .name {
+    @include roboto(60px, white);
+  }
   .section-box {
     max-width: 980px;
     margin: auto;
@@ -94,21 +96,8 @@ body {
     }
   }
   p {
-    @include roboto(20px);
+    @include roboto(20px, white);
   }
-  .go-down {
-    cursor: pointer;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  color: white;
-  p {
-    font-family: syncopate;
-    margin: 0;
-  }
-  @include hover-effect(10px, white);
-}
-  
 }
 
 .profile-grid {
@@ -159,32 +148,8 @@ body {
       bottom: 5px;
     }
   }
-  .go-down {
-    cursor: pointer;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  color: black;
-  p {
-    font-family: syncopate;
-    margin: 0;
-  }
-  @include hover-effect(10px, black);
-  }
-  .go-up {
-    cursor: pointer;
-  position: relative;
-  top: 0;
-  text-align: center;
-  color: black;
-  p {
-    font-family: syncopate;
-    margin: 0;
-  }
-  @include hover-effect(10px, black);
 }
-}
-  
+
 .portf-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -200,12 +165,12 @@ body {
     grid-column: 1;
     grid-row: 1;
     border: solid black 1px;
-  }  
+  }
   .port-img-1-details {
     grid-column: 2 / 4;
     grid-row: 1;
   }
-  
+
   .port-img-2 {
     grid-column: 1;
     grid-row: 2;
@@ -235,7 +200,7 @@ body {
     grid-column: 2 / 4;
     grid-row: 4;
   }
-  
+
   .port-img-5 {
     grid-column: 1;
     grid-row: 5;
@@ -256,39 +221,16 @@ body {
     margin: auto;
   }
   p {
-    @include roboto(20px);
+    @include roboto(20px, white);
   }
   .section-title {
     @include roboto(72px, white);
-  }
-    .go-up {
-      cursor: pointer;
-    position: relative;
-    top: 0;
-    text-align: center;
-    color: white;
-    p {
-      font-family: syncopate;
-      margin: 0;
-    }
-    @include hover-effect(10px, white);
-  }
-}
-
-#contact-form {
-  max-width: 600px;
-  * {
-    margin-top: 5px;
   }
 }
 .message-field {
   width: 100%;
   height: 100px;
   overflow: scroll;
-}
-
-.name {
-  @include roboto(60px);
 }
 .up {
   opacity: 100;
@@ -315,7 +257,6 @@ body {
     font-size: 22px;
   }
   &:hover {
- 
   }
 }
 .contact-buttons {
@@ -329,7 +270,12 @@ body {
   }
   color: white;
   @include roboto(36px, white);
-  @include hover-effect;
+  &:hover {
+    border-bottom: solid white;
+    i {
+      color: blue;
+    }
+  }
   i {
     font-size: 40px;
     margin-right: 8px;
@@ -337,6 +283,81 @@ body {
 }
 .fcc-icon {
   font-size: 30px !important;
+}
+.go-btn {
+  width: 200px;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  h2 {
+    font-family: 'syncopate';
+  }
+  @include border;
+}
+.go-btn-on-black {
+  color: white;
+  &:hover {
+    color: black;
+    border-color: white;
+    background-color: white;
+    h2 {
+      color: black;
+    }
+  }
+}
+.go-btn-on-white {
+  color: black;
+  &:hover {
+    color: white;
+    border-color: black;
+    background-color: black;
+    h2 {
+      color: white;
+    }
+  }
+}
+.go-up {
+  top: 0;
+  h2 {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.go-down {
+  bottom: 0;
+  h2 {
+    margin: 10px 0px 0px 0px;
+  }
+}
+.nav-over-profile {
+  color: white;
+  &.social {
+    &:hover {
+      color: blue;
+    }
+  }
+  &.nav-buttons {
+    &:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+  }
+}
+.nav-over-portfolio {
+  color: black;
+  &.social {
+    &:hover {
+      color: blue;
+    }
+  }
+  &.nav-buttons {
+    &:hover {
+      color: white;
+      background-color: black;
+      border-color: black;
+    }
+  }
 }
 @media screen and (max-width: 1095px) {
   .top-navbar{
@@ -365,7 +386,7 @@ body {
         position: relative;
         top: 48px;
       }
-      
+
       .drop-button {
         display: block;
         position: absolute;
@@ -386,125 +407,125 @@ body {
     }
   }
   .profile-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0px;
-  grid-auto-rows: minmax(50px, auto);
-  &> div {
-    border: none;
-  }
-  .g1 {
-    grid-column: 1 / 3;
-    grid-row: 2;
-    p {
-      margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(50px, auto);
+    &> div {
+      border: none;
+    }
+    .g1 {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      p {
+        margin: 0;
+      }
+    }
+    .g2 {
+      grid-column: 1 / 4;
+      grid-row: 3;
+      p {
+        margin: 0px, 5px, 5px, 5px;
+        font-size: 16px !important;
+      }
+    }
+    .g3 {
+      grid-column: 3;
+      grid-row: 2;
+      height: 100px;
+    }
+    .g4 {
+      grid-column: 1 / 4;
+      grid-row: 4;
     }
   }
-  .g2 {
-    grid-column: 1 / 4;
-    grid-row: 3;
-    p {
-      margin: 0px, 5px, 5px, 5px;
-      font-size: 16px !important;
-    }
-  }
-  .g3 {
-    grid-column: 3;
-    grid-row: 2;
-    height: 100px;
-  }
-  .g4 {
-    grid-column: 1 / 4;
-    grid-row: 4;
-  }
-}
   #portfolio {
     min-height: 3000px;
   }
   .portf-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 20px;
-  &> div {
-    height: auto;
-    overflow: hidden;
-    //border: 2px solid rgb(233,171,88);
-  }
-  .port-img-1 {
-    grid-column: 1;
-    grid-row: 1;
-    border: solid black 1px;
-  }  
-  .port-img-1-details {
-    grid-column: 1;
-    grid-row: 2;
-    padding-bottom: 12px;
-  }
-  
-  .port-img-2 {
-    grid-column: 1;
-    grid-row: 3;
-    border: solid black 1px;
-  }
-  .port-img-2-details {
-    grid-column: 1;
-    grid-row: 4;
-    padding-bottom: 12px;
-  }
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    &> div {
+      height: auto;
+      overflow: hidden;
+      //border: 2px solid rgb(233,171,88);
+    }
+    .port-img-1 {
+      grid-column: 1;
+      grid-row: 1;
+      border: solid black 1px;
+    }
+    .port-img-1-details {
+      grid-column: 1;
+      grid-row: 2;
+      padding-bottom: 12px;
+    }
 
-  .port-img-3 {
-    grid-column: 1;
-    grid-row: 5;
-    border: solid black 1px;
-  }
-  .port-img-3-details {
-    grid-column: 1;
-    grid-row: 6;
-    padding-bottom: 12px;
-  }
+    .port-img-2 {
+      grid-column: 1;
+      grid-row: 3;
+      border: solid black 1px;
+    }
+    .port-img-2-details {
+      grid-column: 1;
+      grid-row: 4;
+      padding-bottom: 12px;
+    }
 
-  .port-img-4 {
-    grid-column: 1;
-    grid-row: 7;
-    border: solid black 1px;
+    .port-img-3 {
+      grid-column: 1;
+      grid-row: 5;
+      border: solid black 1px;
+    }
+    .port-img-3-details {
+      grid-column: 1;
+      grid-row: 6;
+      padding-bottom: 12px;
+    }
+
+    .port-img-4 {
+      grid-column: 1;
+      grid-row: 7;
+      border: solid black 1px;
+    }
+    .port-img-4-details {
+      grid-column: 1;
+      grid-row: 8;
+      padding-bottom: 12px;
+    }
+
+    .port-img-5 {
+      grid-column: 1;
+      grid-row: 9;
+      border: solid black 1px;
+    }
+    .port-img-5-details {
+      grid-column: 1;
+      grid-row: 10;
+      padding-bottom: 12px;
+    }
   }
-  .port-img-4-details {
-    grid-column: 1;
-    grid-row: 8;
-    padding-bottom: 12px;
-  }
-  
-  .port-img-5 {
-    grid-column: 1;
-    grid-row: 9;
-    border: solid black 1px;
-  }
-  .port-img-5-details {
-    grid-column: 1;
-    grid-row: 10;
-    padding-bottom: 12px;
-  }
-}
   .link-btn {
-  margin-right: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  //font-size: 16px !important;
-  padding: 10px;
-  background-color: none;
-  border: {
-    style: solid;
-    color: black;
-    width: 1px;
-    radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    //font-size: 16px !important;
+    padding: 10px;
+    background-color: none;
+    border: {
+      style: solid;
+      color: black;
+      width: 1px;
+      radius: 30px;
+    }
+    @include roboto(16px, black);
+    i {
+      font-size: 16px;
+    }
+    &:hover {
+
+    }
   }
-  @include roboto(16px, black);
-  i {
-    font-size: 16px;
-  }
-  &:hover {
- 
-  }
-}
 }

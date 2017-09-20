@@ -4,189 +4,178 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto|Syncopate" rel="stylesheet">
-  
+
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
 
 <body>
   <div id = "navbar" class = "top-navbar fixed">
-  <a href="https://www.facebook.com/DRossScarborough" class = "social"><i onclick="upMenu()" class="fa fa-facebook-square fa-2x"></i></a>
-  <a href="https://github.com/SourceHorse" class = "social"><i onclick="upMenu()" class="fa fa-github-square fa-2x"></i></a>
-  <a href="https://www.linkedin.com/in/ross-scarborough-803162144/" class = "social"><i onclick="upMenu()" class="fa fa-linkedin-square fa-2x"></i></a>
-  <a href = "#profile" class = "nav-buttons">Profile</a>
-  <a href = "#portfolio" class = "nav-buttons">Portfolio</a>
-  <a href = "#contact" class = "nav-buttons">Contact</a>
-  <i class="fa fa-bars drop-button" onClick = "dropMenu()"></i>
-</div>
+    <a href="https://www.facebook.com/DRossScarborough" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-facebook-square fa-2x"></i></a>
+    <a href="https://github.com/SourceHorse" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-github-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/in/ross-scarborough-803162144/" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-linkedin-square fa-2x"></i></a>
+    <a href = "#profile" class = "nav-buttons nav-over-profile">Profile</a>
+    <a href = "#portfolio" class = "nav-buttons nav-over-profile">Portfolio</a>
+    <a href = "#contact" class = "nav-buttons nav-over-profile">Contact</a>
+    <i class="fa fa-bars drop-button nav-over-profile" onClick = "dropMenu()"></i>
+  </div>
 
-<div id = "profile">
-  <div class = "section-box">
-    <div class = "profile-grid">
-      <div class = "g1">
-        <div class = "name">Ross Scarborough</div>
-        <p>Web Designer / Developer</p>
-      </div>
-      <div class = "g2">
-        
-        <p>I started learning to code in June of 2017. I have received guidance from many close friends in the industry and supplemented my learning with sites like FreeCodeCamp and Codecademy.</p>
-        <p>I have learned very quickly and I continue to expand on my knowledge due to constant a drive to know more. My current coding skills include HTML, CSS, SASS, Vanilla JavaScript, and jQuery. I have built several applications that utilize APIs, responsive design, and minimalist intuitive interfaces.</p>
-        
-      </div>
-      <div class = "g3">
-        <img src = "https://image.ibb.co/gN4qoQ/Meinkorea.jpg">
-      </div>
-
-        
-
-    </div>
-    <div class = "go-down" onClick = "scrollTo(portfolio)">
-          <p>Portfolio</p>
-        <i class="fa fa-chevron-down"></i>
+  <div id = "profile">
+    <div class = "section-box">
+      <div class = "profile-grid">
+        <div class = "g1">
+          <div class = "name">Ross Scarborough</div>
+          <p>Web Designer / Developer</p>
         </div>
-  </div>
-</div>
+        <div class = "g2">
 
-<div id = "portfolio">
-  <div class = "section-box">
-    <br>
-    <br>
-    <div class = "go-up" onClick = "scrollTo(profile)">
-      <i class="fa fa-chevron-up"></i>
-      <p>Profile</p>
-    </div>
-    <div class = "section-title">Portfolio
-    </div>
-    <p>This portfolio page was created with HTML, SASS(scss), CSS (w/grid layout), and JavaScript/jQuery/jQueryUI.</p>
-    <p>Here are some of the projects I have made while developing my coding skills. </p>
-    <br>
-    
-    <div class = "portf-grid">
-      
-      <div class = "port-img-1">
-        <img src = "https://image.ibb.co/ddGbUF/Twitch_View.jpg">
-      </div>
-      <div class = "port-img-1-details">
-        <p class = "header">Twitch Viewer</p>
-        <p>HTML, CSS (w/grid layout), Bootstrap, JavaScript</p>
-        <p>Twitch.tv is an online video game streaming site where anyone can share live gameplay. This responsive web app utilizes the twitch.tv API to fetch information on popular streamers. </p>
-        <br>
-          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/xLMjjE/">
-          <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-          View on Codepen
-          </a>
-        <a class = "link-btn" href = "https://github.com/SourceHorse/twitchviewer">
-          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-          Github Repository
-          </a>
-      </div>
-      
-      <div class = "port-img-2">
-        <img src = "https://image.ibb.co/j95BUF/Wiki_Search.jpg">
-      </div>
-      <div class = "port-img-2-details">
-        <p>Wikipedia Search</p>
-        <p>HTML, CSS, Bootstrap, jQuery, jQueryUI, JavaScript</p>
-        <p>This app uses the MediaWiki API to return search results from queries entered into the form. It also has a responsive design.</p>
-        <br>
-          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/NvMmBy/">
-          <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-          View on Codepen
-          </a>
-        <a class = "link-btn" href = "#">
-          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-          Github Repository
-          </a>
-      </div>
-      
-      <div class = "port-img-3">
-        <img src = "https://image.ibb.co/mguS3a/Weather_App.jpg">
-      </div>
-      <div class = "port-img-3-details">
-        <p>Local Weather</p>
-        <p>HTML, CSS (w/grid layout), Bootstrap, jQuery, jQueryUI</p>
-        <p>This app uses a FreeCodeCamp weather API to find weather conditions in the user's area based on the device's coordinates.</p>
-        <br>
-          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoMJGP/">
-          <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-          View on Codepen
-          </a>
-        <a class = "link-btn" href = "https://github.com/SourceHorse/weatherapp">
-          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-          Github Repository
-          </a>
-      </div>
-      
-      <div class = "port-img-4">
-        <img src = "https://image.ibb.co/maj5pF/QuoteGen.jpg">
-      </div>
-      <div class = "port-img-4-details">
-        <p>Quote Generator</p>
-        <p>HTML, CSS, Bootstrap, JavaScript, jQuery, jQueryUI</p>
-        <p>This app uses the Quotes on Design API to fetch a new random quote and JavaScript arrays to change the font and color of UI elements. </p>
-        <br>
-          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoyjgj/">
-          <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-          View on Codepen
-          </a>
-        <a class = "link-btn" href = "https://github.com/SourceHorse/quotegen">
-          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-          Github Repository
-          </a>
-      </div>
-      <div class = "port-img-5">
-        <img src = "https://image.ibb.co/hZdfPF/Sagan_Page.jpg">
-      </div>
-      <div class = "port-img-5-details">
-        <p>Carl Sagan Tribute Page</p>
-        <p>HTML, CSS, Bootstrap</p>
-        <p>The first web page I ever made. This is a small tribute to one of the most influential people in modern astronomy and science education.</p>
-        <br>
-          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/mwoGmN/">
-          <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-          View on Codepen
-          </a>
-        <a class = "link-btn" href = "#">
-          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-          Github Repository
-          </a>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class = "go-down" onClick = "scrollTo(contact)">
-          <p>Contact</p>
-        <i class="fa fa-chevron-down"></i>
+          <p>I started learning to code in June of 2017. I have received guidance from many close friends in the industry and supplemented my learning with sites like FreeCodeCamp and Codecademy.</p>
+          <p>I have learned very quickly and I continue to expand on my knowledge due to constant a drive to know more. My current coding skills include HTML, CSS, SASS, Vanilla JavaScript, and jQuery. I have built several applications that utilize APIs, responsive design, and minimalist intuitive interfaces.</p>
+
         </div>
-  </div>
-</div>
-
-<div id = "contact">
-  <div class = "section-box">
-    <br>
-    <br>
-    <div class = "go-up" onClick = "scrollTo(portfolio)">
-      <i class="fa fa-chevron-up"></i>
-      <p>Portfolio</p>
+        <div class = "g3">
+          <img src = "https://image.ibb.co/gN4qoQ/Meinkorea.jpg">
+        </div>
+      </div>
+      <div class = "go-btn go-down go-btn-on-black" onClick = "scrollTo(portfolio)">
+        <h2>Portfolio</h2>
+        <i class = "fa fa-caret-down" aria-hidden="true"></i>
+      </div>
     </div>
-    <div class = "section-title">Contact
-    </div>
-    <p>I am currently available for employment and am eager to join a team and continue to grow as a developer while further advancing my skills.</p>
-    <p>rossscarborough@gmail.com</p>
-    <a class = "contact-buttons" href="https://www.linkedin.com/in/ross-scarborough-803162144/"><i onclick="upMenu()" class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>LinkedIn</a>
-    <a class = "contact-buttons" href="https://www.facebook.com/DRossScarborough"><i onclick="upMenu()" class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>Facebook</a>
-    <a class = "contact-buttons" href="https://github.com/SourceHorse"><i onclick="upMenu()" class="fa fa-github-square fa-2x" aria-hidden="true"></i>Github</a>
-    <a class = "contact-buttons" href="https://www.freecodecamp.org/sourcehorse"><i class="fa fa-free-code-camp fcc-icon" aria-hidden="true"></i>freeCodeCamp</a>
-    
   </div>
-</div>
+  <div id = "portfolio">
+    <div class = "section-box">
+      <br>
+      <br>
+      <div class = "go-btn go-up go-btn-on-white" onClick = "scrollTo(profile)">
+        <i class = "fa fa-caret-up" aria-hidden="true"></i>
+        <h2>Profile</h2>
+      </div>
+      <div class = "inner-section">
+        <div class = "section-title">Portfolio
+        </div>
+        <p>This portfolio page was created with HTML, SASS(scss), CSS (w/grid layout), and JavaScript/jQuery/jQueryUI.</p>
+        <p>Here are some of the projects I have made while developing my coding skills. </p>
+        <br>
+        <div class = "portf-grid">
+          <div class = "port-img-1">
+            <img src = "https://image.ibb.co/ddGbUF/Twitch_View.jpg">
+          </div>
+          <div class = "port-img-1-details">
+            <p class = "header">Twitch Viewer</p>
+            <p>HTML, CSS (w/grid layout), Bootstrap, JavaScript</p>
+            <p>Twitch.tv is an online video game streaming site where anyone can share live gameplay. This responsive web app utilizes the twitch.tv API to fetch information on popular streamers. </p>
+            <br>
+            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/xLMjjE/">
+              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+              View on Codepen
+            </a>
+            <a class = "link-btn" href = "https://github.com/SourceHorse/twitchviewer">
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+              Github Repository
+            </a>
+          </div>
+          <div class = "port-img-2">
+            <img src = "https://image.ibb.co/j95BUF/Wiki_Search.jpg">
+          </div>
+          <div class = "port-img-2-details">
+            <p>Wikipedia Search</p>
+            <p>HTML, CSS, Bootstrap, jQuery, jQueryUI, JavaScript</p>
+            <p>This app uses the MediaWiki API to return search results from queries entered into the form. It also has a responsive design.</p>
+            <br>
+            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/NvMmBy/">
+              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+              View on Codepen
+            </a>
+            <a class = "link-btn" href = "#">
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+              Github Repository
+            </a>
+          </div>
+          <div class = "port-img-3">
+            <img src = "https://image.ibb.co/mguS3a/Weather_App.jpg">
+          </div>
+          <div class = "port-img-3-details">
+            <p>Local Weather</p>
+            <p>HTML, CSS (w/grid layout), Bootstrap, jQuery, jQueryUI</p>
+            <p>This app uses a FreeCodeCamp weather API to find weather conditions in the user's area based on the device's coordinates.</p>
+            <br>
+            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoMJGP/">
+              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+              View on Codepen
+            </a>
+            <a class = "link-btn" href = "https://github.com/SourceHorse/weatherapp">
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+              Github Repository
+            </a>
+          </div>
+          <div class = "port-img-4">
+            <img src = "https://image.ibb.co/maj5pF/QuoteGen.jpg">
+          </div>
+          <div class = "port-img-4-details">
+            <p>Quote Generator</p>
+            <p>HTML, CSS, Bootstrap, JavaScript, jQuery, jQueryUI</p>
+            <p>This app uses the Quotes on Design API to fetch a new random quote and JavaScript arrays to change the font and color of UI elements. </p>
+            <br>
+            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoyjgj/">
+              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+              View on Codepen
+            </a>
+            <a class = "link-btn" href = "https://github.com/SourceHorse/quotegen">
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+              Github Repository
+            </a>
+          </div>
+          <div class = "port-img-5">
+            <img src = "https://image.ibb.co/hZdfPF/Sagan_Page.jpg">
+          </div>
+          <div class = "port-img-5-details">
+            <p>Carl Sagan Tribute Page</p>
+            <p>HTML, CSS, Bootstrap</p>
+            <p>The first web page I ever made. This is a small tribute to one of the most influential people in modern astronomy and science education.</p>
+            <br>
+            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/mwoGmN/">
+              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+              View on Codepen
+            </a>
+            <a class = "link-btn" href = "#">
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+              Github Repository
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class = "go-btn go-down go-btn-on-white" onClick = "scrollTo(contact)">
+        <h2>Contact</h2>
+        <i class = "fa fa-caret-down" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div id = "contact">
+    <div class = "section-box">
+      <br>
+      <br>
+      <div class = "go-btn go-up go-btn-on-black" onClick = "scrollTo(portfolio)">
+        <i class = "fa fa-caret-up" aria-hidden="true"></i>
+        <h2>Portfolio</h2>
+      </div>
+      <div class = "section-title">Contact
+      </div>
+      <p>I am currently available for employment and am eager to join a team and continue to grow as a developer while further advancing my skills.</p>
+      <p>rossscarborough@gmail.com</p>
+      <a class = "contact-buttons" href="https://www.linkedin.com/in/ross-scarborough-803162144/"><i onclick="upMenu()" class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>LinkedIn</a>
+      <a class = "contact-buttons" href="https://www.facebook.com/DRossScarborough"><i onclick="upMenu()" class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>Facebook</a>
+      <a class = "contact-buttons" href="https://github.com/SourceHorse"><i onclick="upMenu()" class="fa fa-github-square fa-2x" aria-hidden="true"></i>Github</a>
+      <a class = "contact-buttons" href="https://www.freecodecamp.org/sourcehorse"><i class="fa fa-free-code-camp fcc-icon" aria-hidden="true"></i>freeCodeCamp</a>
+    </div>
+  </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-
-    <script  src="js/index.js"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <script  src="js/index.js"></script>
 </body>
 </html>

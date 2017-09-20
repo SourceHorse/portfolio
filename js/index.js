@@ -16,8 +16,10 @@ function scrollTo(tgt) {
 
 $(window).scroll(function() {
 	if (($(window).scrollTop() < $('#portfolio').position().top - 10) || ($(window).scrollTop() >= $('#contact').position().top -10)) {
-    $('#navbar').children().css('color', 'white');
+   // $('#navbar').children().css('color', 'white');
+    $('#navbar').children().removeClass('nav-over-portfolio').addClass('nav-over-profile');
   } else {
-    $('#navbar').children().css('color', 'black');
+ //   $('#navbar').children().css('color', 'black');
+    $('#navbar').children().removeClass('nav-over-profile').addClass('nav-over-portfolio');
   };
 });

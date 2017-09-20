@@ -15,29 +15,18 @@ body {
   height: 60px;
   width: 100%;
 }
-.top-navbar p {
-  display: block;
-  float: left;
-  font-family: 'Alegreya Sans SC';
-  font-size: 40px;
-  color: white;
-  margin: 0;
-}
 .top-navbar a {
   text-decoration: none;
-  font-family: 'roboto';
-  font-size: 20px;
-  color: white;
-}
-.top-navbar a:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px white;
+  font-family: roboto;
 }
 .top-navbar .nav-buttons {
   display: block;
   float: left;
   margin: 7px 5px 0px 5px;
-  padding: 5px 20px;
+  padding: 2px 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
 }
 .top-navbar .social {
   display: block;
@@ -54,8 +43,7 @@ body {
   color: white;
 }
 .top-navbar .drop-button:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px white;
+  background-color: white;
 }
 
 #profile {
@@ -66,6 +54,11 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: black;
+}
+#profile .name {
+  font-family: 'roboto';
+  font-size: 60px;
+  color: white;
 }
 #profile .section-box {
   max-width: 980px;
@@ -82,21 +75,6 @@ body {
   font-family: 'roboto';
   font-size: 20px;
   color: white;
-}
-#profile .go-down {
-  cursor: pointer;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  color: white;
-}
-#profile .go-down p {
-  font-family: syncopate;
-  margin: 0;
-}
-#profile .go-down:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px white;
 }
 
 .profile-grid {
@@ -149,36 +127,6 @@ body {
   color: black;
   margin-top: 0px;
   margin-bottom: 5px;
-}
-#portfolio .go-down {
-  cursor: pointer;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  color: black;
-}
-#portfolio .go-down p {
-  font-family: syncopate;
-  margin: 0;
-}
-#portfolio .go-down:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px black;
-}
-#portfolio .go-up {
-  cursor: pointer;
-  position: relative;
-  top: 0;
-  text-align: center;
-  color: black;
-}
-#portfolio .go-up p {
-  font-family: syncopate;
-  margin: 0;
-}
-#portfolio .go-up:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px black;
 }
 
 .portf-grid {
@@ -257,39 +205,11 @@ body {
   font-size: 72px;
   color: white;
 }
-#contact .go-up {
-  cursor: pointer;
-  position: relative;
-  top: 0;
-  text-align: center;
-  color: white;
-}
-#contact .go-up p {
-  font-family: syncopate;
-  margin: 0;
-}
-#contact .go-up:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px white;
-}
-
-#contact-form {
-  max-width: 600px;
-}
-#contact-form * {
-  margin-top: 5px;
-}
 
 .message-field {
   width: 100%;
   height: 100px;
   overflow: scroll;
-}
-
-.name {
-  font-family: 'roboto';
-  font-size: 60px;
-  color: white;
 }
 
 .up {
@@ -334,8 +254,10 @@ body {
   margin-right: 56px;
 }
 .contact-buttons:hover {
-  transition: 0.4s;
-  text-shadow: 0px 0px 10px white;
+  border-bottom: solid white;
+}
+.contact-buttons:hover i {
+  color: blue;
 }
 .contact-buttons i {
   font-size: 40px;
@@ -344,6 +266,82 @@ body {
 
 .fcc-icon {
   font-size: 30px !important;
+}
+
+.go-btn {
+  width: 200px;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+}
+.go-btn h2 {
+  font-family: 'syncopate';
+}
+
+.go-btn-on-black {
+  color: white;
+}
+.go-btn-on-black:hover {
+  color: black;
+  border-color: white;
+  background-color: white;
+}
+.go-btn-on-black:hover h2 {
+  color: black;
+}
+
+.go-btn-on-white {
+  color: black;
+}
+.go-btn-on-white:hover {
+  color: white;
+  border-color: black;
+  background-color: black;
+}
+.go-btn-on-white:hover h2 {
+  color: white;
+}
+
+.go-up {
+  top: 0;
+}
+.go-up h2 {
+  margin: 0px 0px 10px 0px;
+}
+
+.go-down {
+  bottom: 0;
+}
+.go-down h2 {
+  margin: 10px 0px 0px 0px;
+}
+
+.nav-over-profile {
+  color: white;
+}
+.nav-over-profile.social:hover {
+  color: blue;
+}
+.nav-over-profile.nav-buttons:hover {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+.nav-over-portfolio {
+  color: black;
+}
+.nav-over-portfolio.social:hover {
+  color: blue;
+}
+.nav-over-portfolio.nav-buttons:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
 }
 
 @media screen and (max-width: 1095px) {
@@ -385,7 +383,7 @@ body {
   .name {
     font-family: 'roboto';
     font-size: 30px;
-    color: white;
+    color: inherit;
   }
 
   #profile {
